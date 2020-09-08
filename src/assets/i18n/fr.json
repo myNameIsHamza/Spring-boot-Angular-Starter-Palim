@@ -1,0 +1,14 @@
+{
+    "REGISTER":
+    {
+    "Sitetitle": "Site multilingue angulaire",
+    "Name": "nom complet",
+    "NameError": "Le nom doit avoir entre 3 et 30 caractères!",
+    "Email": "Adresse e-mail",
+    "PhoneNo": "numéro de téléphone",
+    "Password": "Mot de passe",
+    "Bio": "Entrez la bio",
+    "TermsConditions": "J'accepte les termes et conditions.",
+    "Submit": "Soumettre"
+}
+}

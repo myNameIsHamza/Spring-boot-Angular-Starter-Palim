@@ -1,0 +1,13 @@
+{"REGISTER":
+{
+    "Sitetitle": "Angular Multi Language Site",
+    "Name": "Name",
+    "NameError": "The name must be between 3 and 30 characters!",
+    "Email": "Email address",
+    "PhoneNo": "phone number",
+    "Password": "Password",
+    "Bio": "Enter bio",
+    "TermsConditions": "I agree to terms and conditions.",
+    "Submit": "Submit"
+}
+}
