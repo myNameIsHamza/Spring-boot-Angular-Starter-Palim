@@ -5,3 +5,4 @@ user-service/.classpath
 user-service/.factorypath
 user-service/.project
 user-service/.settings/
+package-lock.json

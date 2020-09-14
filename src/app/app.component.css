@@ -1,0 +1,13 @@
+.logout{
+    float: right;
+}
+
+.logoutContainer{
+    width: 100%;
+    position: absolute;;
+
+}
+.nav{
+   position: relative;
+   
+}

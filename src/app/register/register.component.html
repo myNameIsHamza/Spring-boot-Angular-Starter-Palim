@@ -1,65 +1,61 @@
-<nav class="navbar navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand">
-            {{'REGISTER.Sitetitle' | translate }}
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="background-wrap">
+        <div class="background"></div>
+    </div>
+
+    <form id="accesspanel" action="">
+        <h1 id="litheader">{{'REGISTER.Sitetitle' | translate }}</h1>
         <span class="form-inline">
             <select class="form-control" #selectedLang (change)="translate.use(selectedLang.value)">
                 <option *ngFor="let language of translate.getLangs()" [value]="language"
-                    [selected]="language === translate.currentLang">
+                    [selected]="language === translate.currentLang" >
                     {{ language }}
                 </option>
             </select>
         </span>
-    </div>
-</nav>
+        <div class="inset">
+            <p>
+                <input id="name" name="name" type="text" class="form-control" required minlength="3" maxlength="30"
+                    ngModel name="name" #name="ngModel" placeholder="{{'REGISTER.Name' | translate}}">
 
-<div class="container">
-    <form>
-        <div class="form-group">
-            <label>{{'REGISTER.Name' | translate}}</label>
-            <input id="name" name="name" type="text" class="form-control"
-             required minlength="3" maxlength="30" ngModel
-                name="name" #name="ngModel">
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
-                <small *ngIf="name.errors.required">
-                    Name is required.
-                </small>
-                <small *ngIf="name.errors.maxlength">
-                    {{'REGISTER.NameError' | translate}}
-                </small>
-                <small *ngIf="name.errors.minlength">
-                    {{'REGISTER.NameError' | translate}}
-                </small>
+                
+            </p>
+            <p>
+                <input type="text" class="form-control" placeholder="{{'REGISTER.Email' | translate}}">
+            </p>
+            <p>
+                <input type="text" class="form-control" placeholder="{{'REGISTER.PhoneNo' | translate}}">
+            </p>
+            <p>
+                <input type="password" class="form-control" placeholder="{{'REGISTER.Password' | translate}}">
+            </p>
+            <p>
+                <textarea rows="3" class="form-control" placeholder="{{'REGISTER.Bio' | translate}}"></textarea>
+            </p>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label">{{'REGISTER.TermsConditions' | translate}}</label>
             </div>
         </div>
-
-        
-
-        <div class="form-group">
-            <label>{{'REGISTER.Email' | translate}}</label>
-            <input type="email" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label>{{'REGISTER.PhoneNo' | translate}}</label>
-            <input type="tel" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label>{{'REGISTER.Password' | translate}}</label>
-            <input type="password" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label>{{'REGISTER.Bio' | translate}}</label>
-            <textarea rows="3" class="form-control"></textarea>
-        </div>
-
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input">
-            <label class="form-check-label">{{'REGISTER.TermsConditions' | translate}}</label>
-        </div>
-        <button type="submit" class="btn btn-block btn-danger">{{'REGISTER.Submit' | translate}}</button>
+        <p class="p-container">
+            <input type="submit" name="Register" id="goRegister" value="{{'REGISTER.Submit' | translate}}" (click)="doRegister()">
+        </p>
+        <p class="p-container">
+            <input type="submit" name="ljogin" id="goLogin" value="Already a member" (click)="goToLogin()" >
+        </p>
     </form>
-</div>
+
+</body>

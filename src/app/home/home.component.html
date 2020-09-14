@@ -12,34 +12,32 @@
 </head>
 
 <body>
+    <div class="background-wrap">
+        <div class="background"></div>
+      </div>
+    
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.mobile}}</td>
+                <td>{{user.password}}</td>
+            </tr>
 
-    <div class="container">
-        <button type="button" class="btn btn-primary" (click)="getUsers()">FindUsers</button>
-    </div>
+        </tbody>
+    </table>
 
-    <div class="container">
-         <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                    <th>Password</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let user of users">
-                    <td>{{user.id}}</td>
-                    <td>{{user.name}}</td>
-                    <td>{{user.email}}</td>
-                    <td>{{user.mobile}}</td>
-                    <td>{{user.password}}</td>
-                </tr>
-
-            </tbody>
-        </table>
-    </div>
 </body>
 
 </html>

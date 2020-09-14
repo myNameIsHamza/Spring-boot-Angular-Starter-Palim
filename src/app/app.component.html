@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<div class="container">
+    <ul class="nav nav-pills">
+      <li><a  *ngIf="isLoggedIn" class="nav-link home" routerLinkActive="active" routerLink="/home">Home</a></li>
+      <li class="logoutContainer"><a  *ngIf="isLoggedIn" class="nav-link logout" href="/login" (click)=logout()>Logout</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
